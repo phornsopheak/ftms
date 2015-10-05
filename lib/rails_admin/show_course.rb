@@ -29,6 +29,7 @@ module RailsAdmin
 
         register_instance_option :controller do
           proc do
+            @supervisor = User.supervisor
             @course = object
             @members = object.users
             @course_subjects = @course.course_subjects

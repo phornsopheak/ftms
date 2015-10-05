@@ -5,7 +5,7 @@ module RailsAdmin
         RailsAdmin::Config::Actions.register(self)
 
         register_instance_option :visible? do
-          authorized? && bindings[:object].class == Course
+          false
         end
 
         register_instance_option :member do
